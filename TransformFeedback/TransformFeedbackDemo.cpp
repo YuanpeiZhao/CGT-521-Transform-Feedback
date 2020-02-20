@@ -185,7 +185,7 @@ void reload_shader()
    }
    else
    {
-      glClearColor(0.35f, 0.35f, 0.35f, 0.0f);
+      glClearColor(0.1f, 0.1f, 0.1f, 0.0f);
 
       if(shader_program != -1)
       {
@@ -231,7 +231,7 @@ void initOpenGl()
 
    //Enable alpha blending
    glEnable(GL_BLEND);
-   glBlendFunc(GL_SRC_ALPHA, GL_ONE); //additive alpha blending
+   glBlendFunc(GL_ONE_MINUS_SRC_ALPHA, GL_ONE); //additive alpha blending
    //glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA); //semitransparent alpha blending
 
    //Allow setting point size in fragment shader
